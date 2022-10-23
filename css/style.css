@@ -1,0 +1,168 @@
+@font-face {
+	font-family: "Creepster";
+	src: url(../fonts/Creepster-Regular.woff2) format("woff2"),
+		url(../fonts/Creepster-Regular.woff) format("woff");
+	font-display: swap;
+	font-weight: 400;
+	font-style: normal;
+}
+
+body {
+	font-family: "Creepster", serif;
+	background: url(../img/background.jpg) 0 0/100% no-repeat;
+}
+
+.header__container {
+	width: 500px;
+	height: 500px;
+	margin: 100px 50px 50px 50px;
+	position: relative;
+}
+
+.header__text {
+	position: relative;
+	z-index: 5;
+}
+
+[class$="__title"] {
+	color: #f23c14;
+	font-size: 62px;
+	text-align: center;
+	margin-bottom: 20px;
+	text-shadow: -4px 4px rgba(179, 179, 179, .4), -3px 3px rgba(153, 153, 153, .2), -2px 2px rgba(179, 179, 179, .2), -1px 1px rgba(179, 179, 179, .2), 0px 0px rgba(128, 128, 128, .5), 1px -1px rgba(77, 77, 77, .6), 2px -2px rgba(77, 77, 77, .7), 3px -3px rgba(82, 82, 82, .8), 4px -4px rgba(77, 77, 77, .9), 5px -5px rgba(77, 77, 77, 1);
+	animation: title 2s ease forwards;
+	transform: translate(0, 50%);
+	opacity: 0;
+}
+
+[class$="__about"] {
+	color: #f23c14;
+	font-size: 32px;
+	text-shadow: -4px 4px rgba(179, 179, 179, .4), -3px 3px rgba(153, 153, 153, .2), -2px 2px rgba(179, 179, 179, .2), -1px 1px rgba(179, 179, 179, .2), 0px 0px rgba(128, 128, 128, .5), 1px -1px rgba(77, 77, 77, .6), 2px -2px rgba(77, 77, 77, .7), 3px -3px rgba(82, 82, 82, .8), 4px -4px rgba(77, 77, 77, .9), 5px -5px rgba(77, 77, 77, 1);
+	text-indent: 10px;
+	animation: title 2s ease 2s forwards;
+	transform: translate(0, 50%);
+	opacity: 0;
+}
+
+@keyframes title {
+	0% {}
+
+	100% {
+		transform: translate(0, 0);
+		opacity: 1;
+	}
+}
+
+
+.img__first {
+	position: absolute;
+	left: 750px;
+	bottom: 70px;
+	z-index: 2;
+	opacity: 0.5;
+	animation: cloud-first 2.5s infinite ease-in-out alternate;
+
+}
+
+.img__second {
+	position: absolute;
+	left: 1200px;
+	bottom: 150px;
+	opacity: 0.5;
+	animation: cloud-second 3s infinite ease-in-out alternate;
+
+}
+
+.img__third {
+	position: absolute;
+	left: 300px;
+	bottom: 150px;
+	opacity: 0.5;
+	animation: cloud-third 5s infinite ease-in-out alternate;
+
+}
+
+@keyframes cloud-first {
+	0% {
+		transform: translate(0, -10%);
+	}
+
+	100% {
+		transform: translate(0, 10%);
+	}
+}
+
+@keyframes cloud-second {
+	0% {
+		transform: translate(0, 10%);
+	}
+
+	100% {
+		transform: translate(0, -10%);
+	}
+}
+
+@keyframes cloud-third {
+	0% {
+		transform: translate(0, 30%);
+	}
+
+	100% {
+		transform: translate(0, -30%);
+	}
+}
+
+[class$="__lighting"] {
+	position: absolute;
+	width: 100px;
+	height: 200px;
+	left: 1050px;
+	bottom: 70px;
+	opacity: 0;
+	z-index: 1;
+	animation: cloud-first 2.5s infinite ease-in-out alternate,
+		lighting 1s linear 2s;
+}
+
+@keyframes lighting {
+	0% {}
+
+	100% {
+		opacity: 0.7;
+		transform: scale(1.5);
+	}
+}
+
+.main__hand {
+	position: relative;
+}
+
+.img__hand {
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	opacity: 0;
+	animation: earth 2s ease 2s forwards;
+}
+
+@keyframes earth {
+	0% {
+		transform: translate(0, 0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0, -100px);
+	}
+}
+
+[class$="__tombstone"] {
+	position: absolute;
+	opacity: 1;
+	z-index: 5;
+}
+
+.img__third:hover {
+	animation-play-state: paused;
+}
